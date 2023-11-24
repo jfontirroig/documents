@@ -1,0 +1,357 @@
+--------------------------------------------------------
+A Guide to Building Your First Decentralized Application
+--------------------------------------------------------
+https://www.youtube.com/watch?v=gSQXq2_j-mw
+
+-------------------------------------
+A New Internet for Decentralized Apps
+-------------------------------------
+https://blockstack.org/
+https://github.com/blockstack/blockstack-core/blob/master/docs/atlas_network.md
+https://github.com/blockstack/blockstack-core/blob/master/docs/blockstack_naming_service.md
+https://blockstack.org/whitepaper.pdf
+https://github.com/blockstack-packages/blockstack-tor
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Comments from Peter Lindberg, Innotel, Sweden 
+Yea we do have a lot of issues to think about when it comes to Signing and Verifying Messages in the chain. We have so far tested our algorithm using an 
+u-blox device on the container set to send location data to a central server, where we use Asterisk, a framework for constructing communications applications. 
+This framework uses a dial plan to deal with the phone calls that it recognizes. In our case, now that a call is recognized, we call a script that has the 
+phone number and the extension as input arguments. This script then decodes the value (extension) and puts the decoded value to a database (in this case it 
+is implemented in PostgreSql) that holds all the emitted data for different devices attached to containers:
+
+For every phone call, a new record is added, filling one by one all the values for each identificatory separately. The u-blox device is programed in that way 
+that initially the first, most values for longitude and latitude is sent:
+
+USB.print("La4: ");
+numberToCall(Lat[0]);
+USB.print(" - ");
+USB.println(Lat[0]);
+makeCall();
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In this way, even with the first two calls, we have an approximation about the location. Hence, whichever application that uses this information, can be programmed 
+to be event based and updated for every call subsequently. To demonstrate this, we have built a simple web application that shows the current position of the sensor/device 
+on a map, depending from the last phone calls. Our application is event-based, which is notified every time a new value (identificatory) is added to the database, 
+regarding the sensor/device that is observed.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=tdhpYQCWnCwI
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+BM tested together with the Maersk block chain technology to integrate the players into a container flow in a Cross-Border SupplyChain Solution on Blockchain).
+The solution is based on IBM Bluemix and is an example of private block chain where only the players in the container flow has access to the block chain.
+Shipping document, digital customs stamps withmore is entered into the block chain and so forth
+Ethereum Smart Contracts Lifecycle
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://hackernoon.com/ethereum-smart-contracts-lifecycle-multiple-contracts-message-sender-e9195ceff3ec
+
+-------------------------------------------
+Applying blockchain to customs declarations
+-------------------------------------------
+https://www.youtube.com/watch?v=LeKapqAQimk
+
+---------------------------------------
+The New Web IPFS is the distributed web
+---------------------------------------
+https://ipfs.io/
+https://www.sitepoint.com/ipfs-swarm-decentralized-content-publication-storage/
+https://github.com/ipfs/awesome-ipfs
+https://medium.com/@mycoralhealth/learn-to-securely-share-files-on-the-blockchain-with-ipfs-219ee47df54c
+https://github.com/MichaelMure/Arbore
+https://about.filenation.io/
+https://research.csiro.au/data61/wp-content/uploads/sites/85/2016/08/main.pdf
+
+---------------------------------------------------------------------------------
+A FREE ONLINE MARKETPLACE. NO PLATFORM FEES. NO RESTRICTIONS. EARN CRYPTOCURRENCY
+---------------------------------------------------------------------------------
+https://openbazaar.org/
+
+-----------------------------------------------------------------------------
+Blockchain Technologies
+Tendermint
+Byzantine-fault tolerant state machine replication. Or blockchain, for short.
+-----------------------------------------------------------------------------
+https://tendermint.com/
+
+-----------------------
+Internet of Blockchains
+-----------------------
+https://cosmos.network/
+http://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html
+https://monax.io/
+http://www.diabarcelona.com/eris-industries-the-smart-contract-application-platform-to-solve-big-problems/
+
+---------------------------------------------------------
+Putting additional information or files to the Blockchain
+---------------------------------------------------------
+https://bitcoin.stackexchange.com/questions/32575/what-methods-are-currently-used-to-embed-additional-data-into-the-bitcoin-blockc
+
+https://digitalcommons.augustana.edu/cscfaculty/1/
+
+https://geneos.io/?gclid=EAIaIQobChMIvY6JkIeO3QIVDw2RCh0KHA1pEAAYASAAEgI7TPD_BwE
+https://eos.io/
+
+https://stktoken.com/
+
+https://proofofexistence.com/
+https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/blockchain-beyond-the-hype-what-is-the-strategic-business-value
+
+
+------------------------
+Permissioned Blockchains
+------------------------
+https://www.coindesk.com/information/what-is-the-difference-between-open-and-permissioned-blockchains/
+https://monax.io/learn/permissioned_blockchains/
+https://blog.chronicled.com/how-to-choose-between-public-and-permissioned-blockchain-for-your-project-3c5d4796e3c8
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Enigma es a project in the blockchain stack. Enigma is presenting a permission-less peer-to-peer network that provides a smart -contract platform that enables 
+the development of decentralized applications (dApps), but the contract are secret (privacy by design).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://thestackcafe.com/enigma-is-presenting-a-permission-less-peer-to-peer-network-that-provides-a-smart-contract-platform/
+
+
+------------------------------------------------------------------------------------------------
+Intel® Software Guard Extensions (Intel® SGX)
+An Intel® architecture extension designed to increase the security of application code and data.
+------------------------------------------------------------------------------------------------
+https://software.intel.com/en-us/sgx
+
+------------------------------------------
+Smartcontracts embedded to the Blockchain?
+------------------------------------------
+
+--------------------------------------------------
+Decoupling state and logic in decentralized naming
+--------------------------------------------------
+https://forum.blockstack.org/t/decoupling-state-and-logic-in-decentralized-naming/823
+
+-------------------------------------------------------
+What is the difference between blockstack and Ethereum?
+-------------------------------------------------------
+https://forum.blockstack.org/t/what-is-the-difference-between-blockstack-and-ethereum/781/12
+
+-------------------------------------------------------------------
+Smart Contracts: The Blockchain Technology That Will Replace Lawyer
+-------------------------------------------------------------------
+https://blockgeeks.com/guides/smart-contracts/
+
+https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/blockchain-beyond-the-hype-what-is-the-strategic-business-value
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+A smart contract is a program stored and executed on the blockchain with the purpose of providing the logic of a real-world contract [6, 9, 10]. 
+Being blockchain-based, smart con- tracts are executed and veri?ed by all miners participating in the given blockchain and it is thus almost 
+guaranteed that the smart contract produces the result mandated by its code without the user having to put trust in individual participants of 
+the blockchain network. Smart contracts can cause ledger updates on the blockchain they run on and thus cause automatic moving of funds in response 
+to certain events and based on prede?ned condi- tions. Furthermore, smart contracts cannot interact with any application programming interface (API) 
+outside the blockchain network for security reasons and require special smart contracts in the network called oracles that receive and relay information 
+about the outside world. Smart contracts can and have been used as a substitute for legal contracts in the real world and can, thus, be seen as 
+self-ful?lling automated versions of real-world contracts.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Securing Goods Distribution with Smart Contracts and sensors.pdf
+
+Moreover, when you write a contract in Pact you get, for free, a REST API (pact types have native JSON reps) + an RDBMS representation. As if that weren't enough, it has a H-M type system (opt-in) + formal verification.
+
+texto en:
+https://news.ycombinator.com/item?id=16160179
+
+Analysis PACT with Haskel
+https://steemit.com/blockchain/@andrecronje/cryptocurrency-code-review-kadena
+
+-------------------------------------------
+Example of use of Smartcontract for shipping
+-------------------------------------------
+https://medium.com/@300cubits/first-shipping-transaction-on-ethereum-blockchain-dbe3a7135ec3
+
+https://www.reddit.com/r/btc/comments/4p0gq3/why_turingcomplete_smart_contracts_are_doomed/
+
+---------------------------------------
+Comparison of Smart Contract Platforms
+---------------------------------------
+
+https://hackernoon.com/comparison-of-smart-contract-platforms-2796e34673b7
+
+https://blockgeeks.com/guides/different-smart-contract-platforms/
+
+----------------------------------------------
+What is Cardano Blockchain? Step-by-Step Guide
+----------------------------------------------
+https://blockgeeks.com/guides/what-is-cardano/
+
+
+--------------------------------------------------------------
+Storage solutions
+--------------------------------------------------------------
+Owncloud
+
+Ceph.com
+S3 and Swift compliant APIs
+
+
+-------------------------------------------------------------
+Examples of Blockchain used for Cargo or Supplies traceability
+--------------------------------------------------------------
+https://cryptowithoutborders.com/blockchain/01/02/2018/cargox-replacing-traditional-shipping-bills-of-lading-with-smart-contracts-on-the-blockchain/
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Modum is a supply-chain monitor for the pharmaceutical sector that enables companies to comply with legislation from the EU regarding the delivery of medicinal products.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=JJ4jSfbYY9Y
+
+Example
+https://sawtooth.hyperledger.org/examples/seafood.html
+https://provenance.sawtooth.me/#
+
+https://provenance.sawtooth.me/data/bdfbc0ef691b60d3.html
+https://provenance.sawtooth.me/data/bb4f1c80ac0fabb0.html
+
+https://cryptowithoutborders.com/blockchain/18/02/2018/smart-containers-ico-temperature-controlled-containers-iot-sensors-on-the-blockchain/
+
+https://cryptowithoutborders.com/blockchain/25/01/2018/origintrail-a-purpose-built-blockchain-agnostic-protocol-for-supply-chains/
+
+-----------------------------------------------------------------------
+IBM-Maersk Blockchain Platform Adds 92 Clients As Part Of Global Launch
+-----------------------------------------------------------------------
+https://www.forbes.com/sites/michaeldelcastillo/2018/08/09/ibm-maersk-blockchain-platform-adds-92-clients-as-part-of-global-launch-1/?linkId=55390258#36e4911068a4
+
+-------------------------------------------------
+IoT Considerations Overview of Internet of Things 
+-------------------------------------------------
+https://cloud.google.com/solutions/iot-overview
+
+-------------------------------------------------------
+An Energy Measurement Platform for Wireless IoT Devices
+-------------------------------------------------------
+https://arxiv.org/pdf/1804.04794.pdf
+
+---------------------------------------------
+Real time Data Processing With Cloud IoT Core
+---------------------------------------------
+https://cloud.google.com/community/tutorials/cloud-iot-rtdp
+
+-------------------------------------------------------
+IoT Agent library to interface with NGSI Context Broker 
+-------------------------------------------------------
+https://github.com/telefonicaid/iotagent-node-lib
+
+----------------------------------------------------------------------------------------------
+Conozca MQTT ¿Por qué MQTT es uno de los mejores protocolos de red para Internet de las Cosas?
+----------------------------------------------------------------------------------------------
+https://www.ibm.com/developerworks/ssa/library/iot-mqtt-why-good-for-iot/index.html
+
+-------------------------
+Device management library
+-------------------------
+http://www.cumulocity.com/guides/reference/device-management/
+
+------------------------------------------------------------------------------
+Server side management system for multiple IoT terminals in industrial systems
+------------------------------------------------------------------------------ 
+https://www.infineon.com/dgdl/Infineon-ISPN+Use+Case+Insight_V7-ABR-v01_00-EN.pdf?fileId=5546d4625d5945ed015dc12589b64553
+
+------------------------------------------------------
+FarmBeats: An IoT Platform for Data-Driven Agriculture
+------------------------------------------------------
+https://www.usenix.org/system/files/conference/nsdi17/nsdi17-vasisht.pdf
+
+-----------------------------
+Node-Red Measurements AWS IoT
+-----------------------------
+https://bluecats.github.io/documentation/edge/samples/node-red-measurements-aws-iot
+
+-------------------------------------------------------------------------
+Connect an MXChip IoT DevKit device to your Azure IoT Central application
+-------------------------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-central/howto-connect-devkit
+http://mxchip.com/az3166
+https://www.dfrobot.com/product-1616.html
+
+------------------------------------------
+Evaluation and Measurement of IoT Gateways
+------------------------------------------
+http://www.diva-portal.org/smash/get/diva2:1137595/FULLTEXT01.pdf
+
+-------------------------------------------------------------------------------
+Service -Oriented Middleware Architecture for Mobile Personal Health Monitoring
+-------------------------------------------------------------------------------
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.466.518&rep=rep1&type=pdf
+
+--------------------------------------------------------------------------
+Time Synchronization for Distributed Systems - Tutorial by Stefano Rinaldi
+--------------------------------------------------------------------------
+https://ieeetv.ieee.org/educational_activities/time-synchronization-for-distributed-systems-stefano-rinaldi?rf=channels|14&
+
+-----------------------------------------------------------------------------------------------------------------------------
+A reconfigurable smart interface based on IEEE 1451 and field programmable gate array for multiple Internet of Things devices 
+-----------------------------------------------------------------------------------------------------------------------------
+http://journals.sagepub.com/doi/full/10.1177/1550147717693848
+
+---------------------------------------------------------------------------------
+A Design of GS1 EPCglobal Application Level Events Extension for IoT Applications
+---------------------------------------------------------------------------------
+https://www.jstage.jst.go.jp/article/transinf/E99.D/1/E99.D_2015NTP0002/_pdf
+
+-------------
+Fog computing
+-------------
+https://en.wikipedia.org/wiki/Fog_computing
+https://en.wikipedia.org/wiki/OpenFog_Consortium
+https://www.cisco.com/c/dam/en_us/solutions/trends/iot/docs/computing-overview.pdf
+https://internetofthingsagenda.techtarget.com/definition/fog-computing-fogging
+https://www.openfogconsortium.org/redesigning-security-for-fog-computing-with-blockchain/
+
+-------
+LoRaWan
+-------
+https://medium.com/beelan/haciendo-iot-con-lora-cap%C3%ADtulo-1-qu%C3%A9-es-lora-y-lorawan-8c08d44208e8
+
+---------------------
+Ad-Hoc Network (MESH)
+---------------------
+
+Smart Containers
+http://www.traxens.com
+
+
+Satellite Communications
+------------------------
+
+https://www.satcomglobal.net/GlobalNet/public/product.jsf
+
+
+1 https://blogthinkbig.com/8-400-millones-de-dispositivos-estaran-conectados-a-internet-a-finales-de-2017
+2 Gobierno de los Estados Unidos, Información oficial relativa al Sistema de Posicionamiento Global, https://www.gps.gov/
+3 Adafruit Inudstries, Adafruit Ultimate GPS HAT for Raspberry Pi https://www.adafruit.com/product/2324
+4 Omega engineering, ¿Qué es un sensor termopar? https://es.omega.com/prodinfo/termopares.html
+5 Tablas de referencia del termopar tipo K: https://es.omega.com/temperature/pdf/Type_K_Thermocouple_Reference_Table.pdf
+6 Sensirion sensors, Digital Humidity Sensor SHT7x, 
+https://www.sensirion.com/en/environmental-sensors/humidity-sensors/pintype-digital-humidity-sensors/
+7 Omega engineering, ¿Qué es un acelerómetro? https://es.omega.com/prodinfo/acelerometro.html
+8 Rs store, Sensor ultrasónico RS Pro, https://es.rs-online.com/web/p/sensores-de-proximidad-ultrasonicos/2370799/
+9 LoRa Alliance, What is the LoRaWAN Specification? https://www.lora-alliance.org/about-lorawan
+10 LoRa Alliance, A technical overview of LoRa and LoRaWAN, November 2015 
+11 LoRa Alliance, LoRaWAN 101A Technical Introduction, 2015 
+12 Sigfox, Sigfox technology overview https://www.sigfox.com/en/sigfox-iot-technology-overview
+13 Carles Antón-Haro y Mischa Doler, Machine-to-machine (M2M) Communications, 2015 
+14 Pilar Andrés-Maldonado y PabloAmeigeras, NarrowBand IoT Data Transmission  Procedures for Massive Machine Type Communications¸ Universidad de Granada 
+15 Rohde&Schwarz, NarrowBand Internet of Things Whitepaper, 
+https://www.rohde-schwarz.com/es/aplicaciones/internet-de-las-cosas-en-banda-estrecha-white-paper_230854-314242.html
+16 Activage Project, Report on IoT European Platforms, September 2017, https://iot-epi.eu/
+17 Documentación oficial de FIWARE Orion: https://fiware-orion.readthedocs.io
+18 Documentación oficial de FIWARE STH Comet https://fiware-sth-comet.readthedocs.io
+19 Documentación oficial de FIWARE Perseo (CEP) http://fiware-iot-stack.readthedocs.io/en/latest/cep/index.html
+20 MongoDB Inc, What is MongoDB? https://www.mongodb.com/what-is-mongodb
+21 Universidad de Berkeley, Cyber-physical Systems https://ptolemy.berkeley.edu/projects/cps/
+22 Docker Inc., What is Docker, https://www.docker.com/what-docker
+23 Docker Inc., What is a container, https://www.docker.com/what-container 
+24 Canonical Group, LXD Introduction, https://linuxcontainers.org/lxd/#
+25 Canonical Group, The no-nonsense way to accelerate your business with containers, February 2017 
+26 Maersk Line, What is Remote Container Management, https://www.maerskline.com/shipping/remote-container-management 
+27 Loginno, Smart container https://loginno.com/ 
+28 Traxens, TRAXENS Technology, http://www.traxens.com/en/technology 
+29 Pointer Telocation LTD, Cellocator, https://www.cellocator.com/products/cellotrack/ 
+30 Tritón de GlobeArea, http://www.globearea.com/triton
+31 Weightless, http://www.weightless.org/
+32 Sensor de Peso de Nanolike https://www.nanolike.com/fill-level-monitoring-solution/
+

@@ -1,0 +1,36 @@
+a las 12:06, peterl29 escribió:
+> Importance of Collecting Early Feedback with a customer case (would be good if we are able to find a cargo carrier pilot customer in Chile, Holland or Nordics)!
+> 
+> We may be feeling that the idea that is born in our brains is a killer one. We might be assured about its success. But if we really want to launch a product for which users will go crazy, soliciting early customer response is essential.
+> 
+> Let’s look into the reasons why collecting early feedback is beneficial.
+> 
+> i) To add business value – The idea that is present in the early stage would be an unpolished one. There wouldn’t be any clarity about the business value required. Short and quick spurts of visible work can do a useful job in collecting early feedback from early adopters. This could go a long way in deciding on how we need our product and what business value we can attach to it.
+> 
+> ii) To know the pulse of a volatile market – Whether our idea is a fresh one or an existing one with a new twist, we can’t be certain about a definite demand for it when it is launched. We are going to face an unpredictable market as user expectations keep changing. It is therefore essential to tap the prospects’ feedback.
+> 
+> iii) To save our budget – An early peek into user behaviour could help in saving an enormous amount of money that would have gone into building features a user does not use.
+> 
+> What Defines a Viable Feature?
+> 
+> The selection of must-have features depends on the nature of the product that we plan to get into the market.
+> 
+> a. Is it an existing concept with a better approach? Does it offer a better user experience?
+> 
+> If so, this unique selling point (USP) is what you would need to churn out and highlight in its simplest form as an MVP.
+> 
+> b. Is it an existing concept, but for a different market?
+> 
+> If so, the core function would need to be included in its simplest form to test the waters. A rich design interface not a priority here.
+> 
+> c. Is it a fresh/unique idea?
+> 
+> Don’t wait around, get the idea out in a very short time as a working prototype, which helps gather feedback. The UI/UX can be a basic but friendly on. We can then build on the feedback we get from actual users. What’s important here is to put our idea out in the market, in a short time, with very less investment. The early market response we get will either pave our way to a successful startup or help save millions.
+> 
+> It is important that the features we choose as viable should have the element of intrigue to be noticed by a market. Just pushing out a “been there, done that” feature in a short time will give us no valuable response.
+> 
+> They key here is not just “early to market” but rather “early to market with our USP”. The more time we spend building complex features, the more the probability that what you are building is not what the user wants.
+> 
+> I´ll suggest that we will look into how to sell the MVP idea and how to find out the “viable” or “valuable” features in this scenario.
+> 
+

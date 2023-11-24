@@ -1,0 +1,78 @@
+A Guide to Building Your First Decentralized Application
+https://www.youtube.com/watch?v=gSQXq2_j-mw
+A New Internet for Decentralized Apps
+https://blockstack.org/
+Comments from Peter Lindberg, Innotel, Sweden
+Yea we do have a lot of issues to think about when it comes to Signing and Verifying Messages in the chain. We have so far tested our algorithm using an u-blox device on the container set to send location data to a central server, where we use Asterisk, a framework for constructing communications applications . This framework uses a dial plan to deal with the phone calls that it recognizes. In our case, now that a call is recognized, we call a script that has the phone number and the extension as input arguments. This script then decodes the value (extension) and puts the decoded value to a database (in this case it is implemented in PostgreSql) that holds all the emitted data for different devices attached to containers:
+
+For every phone call, a new record is added, filling one by one all the values for each identificatory separately. The u-blox device is programed in that way that initially the first, most values for longitude and latitude is sent:
+
+USB.print("La4: ");
+numberToCall(Lat[0]);
+USB.print(" - ");
+USB.println(Lat[0]);
+makeCall();
+
+In this way, even with the first two calls, we have an approximation about the location. Hence, whichever application that uses this information, can be programmed to be event based and updated for every call subsequently. To demonstrate this, we have built a simple web application that shows the current position of the sensor/device on a map, depending from the last phone calls. Our application is event-based, which is notified every time a new value (identificatory) is added to the database, regarding the sensor/device that is observed.
+https://www.youtube.com/watch?v=tdhpYQCWnCwI
+BM tested together with the Maersk block chain technology to integrate the players into a container flow in a Cross-Border SupplyChain Solution on Blockchain).The solution is based on IBM Bluemix and is an example of private block chain where only the players in the container flow has access to the block chain.Shipping document, digital customs stamps withmore is entered into the block chain and so forth
+Ethereum Smart Contracts Lifecycle
+https://hackernoon.com/ethereum-smart-contracts-lifecycle-multiple-contracts-message-sender-e9195ceff3ec
+Applying blockchain to customs declarations
+https://www.youtube.com/watch?v=LeKapqAQimk
+The New Web
+IPFS is the distributed web
+https://ipfs.io/
+
+A FREE ONLINE MARKETPLACE. NO PLATFORM FEES. NO RESTRICTIONS. EARN CRYPTOCURRENCY
+https://openbazaar.org/
+
+Blockchain Technologies
+Tendermint
+Byzantine-fault tolerant state machine replication. Or blockchain, for short.
+https://tendermint.com/
+Internet of Blockchains
+https://cosmos.network/
+http://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html
+
+
+Putting additional information or files to the Blockchain
+
+https://bitcoin.stackexchange.com/questions/32575/what-methods-are-currently-used-to-embed-additional-data-into-the-bitcoin-blockc
+
+https://digitalcommons.augustana.edu/cscfaculty/1/
+
+
+https://proofofexistence.com/
+
+
+Smartcontracts embedded to the Blockchain?
+
+Decoupling state and logic in decentralized naming
+https://forum.blockstack.org/t/decoupling-state-and-logic-in-decentralized-naming/823
+
+What is the difference between blockstack and Ethereum?
+https://forum.blockstack.org/t/what-is-the-difference-between-blockstack-and-ethereum/781/12
+
+Smart Contracts: The Blockchain Technology That Will Replace Lawyer
+https://blockgeeks.com/guides/smart-contracts/
+
+Examples of Blockchain used for Cargo or Supplies traceability
+
+https://cryptowithoutborders.com/blockchain/01/02/2018/cargox-replacing-traditional-shipping-bills-of-lading-with-smart-contracts-on-the-blockchain/
+
+
+Modum is a supply-chain monitor for the pharmaceutical sector that enables companies to comply with legislation from the EU regarding the delivery of medicinal products.
+https://www.youtube.com/watch?v=JJ4jSfbYY9Y
+
+Example
+https://sawtooth.hyperledger.org/examples/seafood.html
+https://provenance.sawtooth.me/#
+
+https://provenance.sawtooth.me/data/bdfbc0ef691b60d3.html
+https://provenance.sawtooth.me/data/bb4f1c80ac0fabb0.html
+
+
+https://cryptowithoutborders.com/blockchain/18/02/2018/smart-containers-ico-temperature-controlled-containers-iot-sensors-on-the-blockchain/
+
+https://cryptowithoutborders.com/blockchain/25/01/2018/origintrail-a-purpose-built-blockchain-agnostic-protocol-for-supply-chains/

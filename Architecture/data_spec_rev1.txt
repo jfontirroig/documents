@@ -1,0 +1,707 @@
+3.2.7 Storage of JSON files in the Cloud and Blockchain
+
+The schema of the JSON file that the TMS Node API should create is:
+
+Schema example
+
+    {
+  "DTEvent": string,
+          "EnrollmentContainer": string,
+          "NumberBillOfLading": string, 
+          "CallID": string,
+          "ContainerCategorySensorId": number,
+          "Sensor": 
+          [   
+                 {
+                      "ContainerSensorDescription": string,
+   "ContainerSensorId": number,
+                  "FrecuencyNotificationMinutes": number,
+                  "Type": string,
+                  "Unit": string,
+                  "Value": string,
+   "State": string,
+   "LowerThreshold": string,
+   "UpperThreshold": string,
+   "SmartContractRule": string,
+   "DTregistry": string
+   }
+          ]
+    }
+
+
+Files in JSON format are stored in Blockchain and in folders in the Cloud.
+
+The data of the sensors, their location, date and time are stored according to the identification number of the container or the identification number of the bill of lading.
+
+
+Event example
+
+    {
+  "DTEvent": "2018-10-21T12:34:00:7992",
+          "EnrollmentContainer": "BMOU8710633",
+          "NumberBillOfLading": "WSZCF09050002", 
+          "CallID": "9835676546",
+          "ContainerCategorySensorId": 34,
+          "Sensor": 
+          [   
+                 {
+                      "ContainerSensorDescription": "PositionsGPS",
+   "ContainerSensorId": 4019,
+                  "FrecuencyNotificationMinutes": 2,
+                  "Type": "GEOjson",
+                  "Units": "",
+                  "Value": 
+                      {
+   "coordinates": 
+   [
+     -0.308595436,
+     39.43556368
+                  ]
+       },
+   "State": "without rule",
+   "LowerThreshold": "",
+   "UpperThreshold": "",
+   "SmartContractRule": "",
+   "DTregistry": "2018-10-21T10:30:44:00Z"
+   },
+   { 
+                      "ContainerSensorDescription": "Temperature", 
+   "ContainerSensorId": 4020,
+                  "FrecuencyNotificationMinutes": 2,
+                  "Type": "float",
+                  "Unit": "°C",
+                  "Value": 5,
+   "State": "with rule",
+   "LowerThreshold": -3,
+   "UpperThreshold": 20,
+   "SmartContractRule": "good",
+   "DTregistry": "2018-10-21T10:30:44:00Z"
+   }, 
+   {
+                      "ContainerSensorDescription": "Gases",
+   "ContainerSensorId": 4022,
+                  "FrecuencyNotificationMinutes": 2,
+                  "Type": "integer",
+                  "Unit": "%",
+                  "Value": 15,
+   "State": "with rule",
+   "LowerThreshold": 0,
+   "UpperThreshold": 2,
+   "SmartContractRule": "bad",
+   "DTregistry": "2018-10-21T10:30:44:00Z"
+   }
+          ]   
+      }
+
+The physical name of the file that is stored in the Cloud contains the data of:
+
+EnrollmentContainer + ‘-‘ + NumberBillOfLading + ‘-‘ + CallID + ‘-‘ + ContainerCategorySensorId + ‘-‘ + DTEvent . JSON
+
+Example
+
+BMOU8710633-WSZCF09050002-9835676546-34-2018-10-21T1234007992.json
+
+
+The schema of the JSON file is:
+
+Schema 
+
+    {
+  "BL_head": string,
+  "BL_type":
+                  {
+                      "type_id": string,
+                      "type_name": string                      
+                  },
+  "BL_company":
+                 {
+                      "company_id": string,
+                      "company_name": string
+                 },
+  "BL_shipper":
+                 {
+                      "shipper_id": string,
+                      "shipper_name": string,
+                      "shipper_direction": string,
+                      "shipper_po_box": string,
+                      "city": 
+                           {
+                      "city_id": string,
+                      "city_name": string,
+                      "region_state": 
+                           {
+                      "region_state_id": string,
+                      "region_state_name": string,
+                      "country": 
+                           {
+                      "contry_id": string,
+                      "country_name": string
+                    }
+            }
+     }
+                      
+                 },
+  "BL_consignee":
+                 {
+                      "consignee_id": string,
+                      "consignee_name": string,
+                      "consignee_direction": string,
+                      "consignee_po_box": string,
+                      "city": 
+                           {
+                      "city_id": string,
+                      "city_name": string,
+                      "region_state": 
+                           {
+                      "region_state_id": string,
+                      "region_state_name": string,
+                      "country": 
+                           {
+                      "contry_id": string,
+                      "country_name": string
+                    }
+            }
+     }
+                      
+                 },
+  "BL_notifyparty":
+                 {
+                      "notifyparty_id": string,
+                      "notifyparty_name": string,
+                      "notifyparty_direction": string,
+                      "notifyparty_po_box": string,
+                      "city": 
+                           {
+                      "city_id": string,
+                      "city_name": string,
+                      "region_state": 
+                           {
+                      "region_state_id": string,
+                      "region_state_name": string,
+                      "country": 
+                           {
+                      "contry_id": string,
+                      "country_name": string
+                    }
+            }
+     }
+                      
+                 },
+  "BL_carrier":
+                 {
+                      "carrier_id": string,
+                      "carrier_name": string,
+                      "carrier_direction": string,
+                      "carrier_po_box": string,
+                      "city": 
+                           {
+                      "city_id": string,
+                      "city_name": string,
+                      "region_state": 
+                           {
+                      "region_state_id": string,
+                      "region_state_name": string,
+                      "country": 
+                           {
+                      "contry_id": string,
+                      "country_name": string
+                    }
+            }
+     }
+                      
+                 },
+
+          "place_of_acceptance": string,
+          "Vessel": 
+                  {
+                      "vessel_id": string,
+                      "vessel_name": string                      
+                  },
+          "Port_of_lading":
+                  {
+                      "port_id": string,
+                      "port_name": string,                      
+       "country": 
+           {
+      "country_id": string,
+      "country_name": string
+   }
+                  },
+          "voyage": string,
+          "place_of_aceptance": string,
+          "Port_of_discharge":
+                  {
+                      "port_id": string,
+                      "port_name": string,                      
+       "country": 
+           {
+      "country_id": string,
+      "country_name": string
+   }
+                  },
+          "play_of_delivery": string,
+          "final_destination": string,
+          "freight_and_charges": string,
+          "rate": string,
+          "amount": string,
+          "prepaid": string,
+          "collect": string,
+          "total_nro_of_package_for_lcl": string,
+          "total_nro_of_container_for_fcl": string,
+          "total_charges": string,
+          "Freight_payable":
+                  {
+                      "freight_payable_id": string,
+                      "freight_payable_name": string                      
+                  },
+          "place_of_issue": string,
+          "date_of_issue": string,
+          "nro_of_original_bl": string,
+          "signature": string,
+          "container_id": string,
+          "BL_Detail":
+           [
+                  {
+                      "BL_detail_id": string,
+                      "marks_and_number": string,                    
+                      "packages": string,                    
+                      "description_of_goods": string,                    
+                      "weight_declared": string,                    
+                      "measurements": string                    
+                  }
+           ]
+
+}
+
+
+Files in JSON format are stored in the Cloud.
+
+Example
+
+    {
+  "BL_head": "WSZCF09050002",
+  "BL_type":
+                  {
+                      "type_id": "1", 
+                      "type_name": "Master"
+                  },
+  "BL_company":
+                 {
+                      "company_id": "23", 
+                      "company_name": "Maerks Line"
+                 },
+  "BL_shipper":
+                 {
+                      "shipper_id": "1034",
+                      "shipper_name": "Texmen S.L.",
+                      "shipper_direction": "Calle San José Perales 85",
+                      "shipper_po_box": "46870",
+                      "city": 
+                           {
+                      "city_id": "246",
+                      "city_name": "Valencia",
+                      "region_state": 
+                           {
+                      "region_state_id": "62",
+                      "region_state_name": "Pais Valenciano",
+                      "country": 
+                           {
+                      "country_id": "34",
+                      "country_name": "Spain"
+                    }
+            }
+     }
+                      
+                 },
+  "BL_consignee":
+                 {
+                      "consignee_id": "766",
+                      "consignee_name": "The Jordan National Bank",
+                      "consignee_direction": "",
+                      "consignee_po_box": "",
+                      "city": 
+                           {
+                      "city_id": "",
+                      "city_name": "",
+                      "region_state": 
+                           {
+                      "region_state_id": "", 
+                      "region_state_namee": "",
+                      "country": 
+                           {
+                      "country_id": "",
+                      "country_name": ""
+                    }
+            }
+     }
+                      
+                 },
+  "BL_notifyparty":
+                 {
+                      "notifyparty_id": "49",
+                      "notifyparty_name": "Phillip Roe and Smithson and Partners for Trade
+                                           And Investment CO",
+                      "notifyparty_direction": "Calle Ben Gurion 23",
+                      "notifyparty_po_box": "66608",
+                      "city": 
+                           {
+                      "city_id": "768",
+                      "city_name": "Jerusalem",
+                      "region_state": 
+                           {
+                      "region_state_id": "7689",
+                      "region_state_name": "East Jerusalem",
+                      "country": 
+                           {
+                      "country_id": "37",
+                      "country_name": "Israel"
+                    }
+            }
+     }
+                      
+                 },
+  "BL_carrier":
+                 {
+                      "carrier_id": "57",
+                      "carrier_name": "Atlantica S.p.A.",
+                      "carrier_direction": "",
+                      "carrier_po_box": "",
+                      "city": 
+                           {
+                      "city_id": "",
+                      "city_name": "",
+                      "region_state": 
+                           {
+                      "region_state_id": "",
+                      "region_state_name": "",
+                      "country": 
+                           {
+                      "country_id": "",
+                      "country_nombre": ""
+                    }
+            }
+     }
+                      
+                 },
+
+          "place_of_acceptance": "",
+          "Vessel": 
+                  {
+                      "vessel_id": "764565", 
+                      "vessel_name": "Emma Maerks"
+                  },
+          "Port_of_lading":
+                  {
+                      "port_id": "65368",
+                      "port_name": "Valencia",                      
+       "country": 
+           {
+      "country_id": "34",
+      "country_name": "Spain"
+   }
+                  },
+          "voyage": "46",
+          "place_of_aceptance": "",
+          "Port_of_discharge":
+                  {
+                      "port_id": "445",
+                      "port_name": "Ashdod",                      
+       "country": 
+           {
+      "country_id": "37",
+      "country_name": "Israel"
+   }
+                  },
+          "play_of_delivery": "",
+          "final_destination": "Ashdod",
+          "freight_and_charges": ",
+          "rate": "",
+          "amount": "",
+          "prepaid": "",
+          "collect": "", 
+          "total_nro_of_package_for_lcl": "",
+          "total_nro_of_container_for_fcl": "",
+          "total_charges": "",
+          "Freight_payable":
+                  {
+                      "freight_payable_id": "1",
+                      "freight_payable_name": "Prepaid"
+                  },
+          "place_of_issue": "Valencia",
+          "date_of_issue": "08/02/2018",
+          "nro_of_original_bl": "Three",
+          "signature": "Agencia Maritima Condeminas Valencia S.A.",
+          "container_id": "BMOU8710633",
+          "BL_Detail":
+           [
+                  {
+                      "BL_detail_id": "1",
+                      "marks_and_number": "",                    
+                      "packages": "20",                    
+                      "description_of_goods": "1x20’ CONTAINER FCL/FCL SHIPPER LOAD STOW AND           
+                                               COUNT HOUSE/HOUSE 110 CARTONS BLANKETS 100% 
+                                               COTTON, DELIVEY TERMS CFR ASHDOD",                     
+                      "weight_declared": "1800 KGS",                    
+                      "measurements": ""
+                  },
+                  {
+                      "BL_detail_id": "2",
+                      "marks_and_number": "",                    
+                      "packages": "35",                    
+                      "description_of_goods": "GOCOS TO BE SHIPPED WITH CONFERENCE LINE SHIPMENT 
+                                               FROM: SPAIN TO ASHDOD PORT FREIHT PREPAID",                    
+                      "weight_declared": "2000 KGS",                    
+                      "measurements": ""
+                  },
+                  {
+                      "BL_detail_id": "3",
+                      "marks_and_number": "",                    
+                      "packages": "14",                    
+                      "description_of_goods": "SAID TO CONTAIN SHIPPERS LOAD, STOW AND COUNT, 
+                                               UNSTOWING AND HANDLING CHARGES ON ACCOUNT OF 
+                                               GOODS.",                    
+                      "weight_declared": "",                    
+                      "measurements": ""
+                  }
+           ]
+
+}
+
+The physical name of the file that is stored in the Cloud contains the data of:
+
+"BL_" + NumberBillOfLading . JSON
+
+Example
+
+BL_WSZCF09050002.json
+
+
+?	Smart Contract Rules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The schema of the JSON file is:
+
+Schema 
+
+      {
+  "bl_head":
+      {
+         "bl_head_id": string,
+         "container_id": string           
+      },
+          "Rules":
+          [
+      {
+  "Correlative":
+                  {
+                      "correlative_id": string,
+                      "Callid":
+                         {
+                            "callid_id": string,
+                            "callid_name": string
+                         },
+                      "Category":
+                         {
+                            "category_id": string,
+                            "category_name": string
+                         },
+                      "Sensor":
+                         {
+                            "sensor_id": string,
+                            "sensor_name": string,
+                            "Unit":
+                               {
+                                 "unit_id": string,
+                                 "unit_name": string
+                               },
+                            "State":
+                               {
+                                 "state_id": string,
+                                 "state_name": string
+                               }
+                         },
+               "State2":
+                         {
+                            "state_id2": string,
+                            "state_name2": string
+                         }
+                   },
+  "upper_thresold": string,
+  "lower_thresold": string,
+  "frecuency_notification_min": string
+  "State3":
+              {
+                 "state_id3": string,
+                 "state_name3": string
+              }
+              }
+
+           ]
+
+      }
+
+
+
+
+
+
+
+Files in JSON format are stored in the Distributed Storage (Cloud).
+
+Example
+
+      {
+  "bl_head":
+      {
+         "bl_head_id": "WSZCF09050002",
+         "container_id": "BMOU8710633"
+      },
+          "Rules":
+      {
+  "Correlative":
+                  {
+                      "correlative_id": "1",
+                      "Callid":
+                         {
+                            "callid_id": "89403933",
+                            "callid_name": "89403933"
+                         },
+                      "Category":
+                         {
+                            "category_id": "34",
+                            "category_name": "34"
+                         },
+                      "Sensor":
+                         {
+                            "sensor_id": "4219",
+                            "sensor_name": "Temperature",
+                            "Unit":
+                               {
+                                 "unit_id": "45",
+                                 "unit_name": "°C"
+                               },
+                            "State":
+                               {
+                                 "state_id": "10",
+                                 "state_name": "Active"
+                               }
+                         },
+               "State2":
+                         {
+                            "state_id2": "10",
+                            "state_name2": "Active"
+                         }
+                   },
+  "upper_thresold": "25",
+  "lower_thresold": "-5",
+  "frecuency_notification_min": "2"
+  "State3":
+              {
+                 "state_id3": "10",
+                 "state_name3": "Active"
+              }
+              },
+      {
+  "Correlativo":
+                  {
+                      "correlativo_id": "2",
+                      "Callid":
+                         {
+                            "callid_id": "89403934",
+                            "callid_name": "89403934"
+                         },
+                      "Category":
+                         {
+                            "category_id": "35",
+                            "category_name": "35"
+                         },
+                      "Sensor":
+                         {
+                            "sensor_id": "4220",
+                            "sensor_name": "Humidity",
+                            "Unit":
+                               {
+                                 "unit_id": "46",
+                                 "unit_name": "%"
+                               },
+                            "State":
+                               {
+                                 "state_id": "10",
+                                 "state_name": "Active"
+                               }
+                         },
+               "State2":
+                         {
+                            "state_id2": "10",
+                            "state_name2": "Active"
+                         }
+                   },
+  "upper_thresold": "100",
+  "lower_thresold": "0",
+  "frecuency_notification_min": "2"
+  "State3":
+              {
+                 "state_id3": "10",
+                 "state_name3": "Active"
+              }
+              }
+      }
+
+
+
+The physical name of the file that is stored in the Cloud contains the data of:
+
+"BL_" + "RULES_" + NumberBillOfLading . JSON
+
+Example
+
+BL_RULES_WSZCF09050002.json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
